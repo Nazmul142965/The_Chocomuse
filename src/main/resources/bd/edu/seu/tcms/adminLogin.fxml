@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.tcms.controller.AdminLoginController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="341.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/TC%20profile.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="adminNameField" layoutX="387.0" layoutY="141.0" />
+      <Label layoutX="417.0" layoutY="31.0" text="Admin Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="387.0" layoutY="113.0" text="Name:" />
+      <PasswordField fx:id="passwordField" layoutX="388.0" layoutY="207.0" />
+      <Label layoutX="390.0" layoutY="181.0" text="Password:" />
+      <Button layoutX="433.0" layoutY="271.0" mnemonicParsing="false" onAction="#loginEvent" style="-fx-background-color: #EFE3D4;" text="Login" />
+   </children>
+</AnchorPane>

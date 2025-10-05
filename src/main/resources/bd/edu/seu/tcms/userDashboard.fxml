@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="404.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.tcms.user.UserDashboard">
+   <children>
+      <ImageView fitHeight="170.0" fitWidth="166.0" layoutY="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/TC%20profile.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutY="182.0" mnemonicParsing="false" onAction="#userDashboardEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA; -fx-border-color: black;" text="🏠 Dashboard" />
+      <Button layoutY="222.0" mnemonicParsing="false" onAction="#userBuyItemEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="➕ Buy Items  " />
+      <Button layoutX="-1.0" layoutY="260.0" mnemonicParsing="false" onAction="#userPayBillEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="💰 Pay Bill" />
+      <Button layoutY="298.0" mnemonicParsing="false" onAction="#userInventoryEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="📦 Inventory" />
+      <Button layoutY="334.0" mnemonicParsing="false" onAction="#userSignOutEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="⚙ Sign Out" />
+      <Pane layoutX="178.0" layoutY="14.0" prefHeight="70.0" prefWidth="408.0" style="-fx-background-color: #E0CDBA;">
+         <children>
+            <Label layoutX="109.0" layoutY="14.0" prefHeight="19.0" prefWidth="150.0" text="Welcom to Chocomuse">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="currentUserName" layoutX="135.0" layoutY="35.0" prefHeight="17.0" prefWidth="99.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="164.0" layoutY="10.0" orientation="VERTICAL" prefHeight="354.0" prefWidth="10.0" />
+      <Pane layoutX="188.0" layoutY="103.0" prefHeight="78.0" prefWidth="149.0" style="-fx-background-color: #E0CDBA;">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="Total amount of spent:" />
+            <Label fx:id="totaAmountSpentField" layoutX="60.0" layoutY="39.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="395.0" layoutY="103.0" prefHeight="78.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="150.0" text="Your Higest Bought Product" />
+            <Label fx:id="highestBoughtProductField" layoutX="69.0" layoutY="39.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

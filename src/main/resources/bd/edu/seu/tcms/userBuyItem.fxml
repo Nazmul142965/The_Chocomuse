@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.tcms.user.UserBuyItem">
+   <children>
+      <ImageView fitHeight="170.0" fitWidth="166.0" layoutX="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/TC%20profile.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="1.0" layoutY="181.0" mnemonicParsing="false" onAction="#userDashboardEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="🏠 Dashboard" />
+      <Button layoutX="1.0" layoutY="221.0" mnemonicParsing="false" onAction="#userBuyItemEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA; -fx-border-color: black;" text="➕ Buy Items  " />
+      <Button layoutY="259.0" mnemonicParsing="false" onAction="#userPayBillEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="💰 Pay Bill" />
+      <Button layoutX="1.0" layoutY="297.0" mnemonicParsing="false" onAction="#userInventoryEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="📦 Inventory" />
+       <Button layoutY="334.0" mnemonicParsing="false" onAction="#userSignOutEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="⚙ Sign Out" />
+      <Separator layoutX="165.0" layoutY="9.0" orientation="VERTICAL" prefHeight="354.0" prefWidth="10.0" />
+      <TableView fx:id="userBuyTableView" layoutX="186.0" layoutY="47.0" prefHeight="200.0" prefWidth="402.0">
+        <columns>
+          <TableColumn fx:id="ImageColumn" prefWidth="87.99998474121094" text="Image" />
+          <TableColumn fx:id="nameColumn" prefWidth="76.0" text="name" />
+            <TableColumn fx:id="priceColumn" prefWidth="72.79998779296875" text="price" />
+            <TableColumn fx:id="expiryDateColumn" prefWidth="91.20001220703125" text="ExpiryDate" />
+            <TableColumn fx:id="quantityColumn" prefWidth="72.80002441406248" text="Quantity" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchField" layoutX="186.0" layoutY="13.0" onKeyPressed="#searchEvent" prefHeight="26.0" prefWidth="402.0" promptText="Search Here" />
+      <ImageView fx:id="userImageShow" fitHeight="98.0" fitWidth="113.0" layoutX="186.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="nameField" layoutX="449.0" layoutY="259.0" prefHeight="26.0" prefWidth="113.0" promptText="Name" />
+      <TextField fx:id="quantityField" layoutX="318.0" layoutY="295.0" prefHeight="26.0" prefWidth="113.0" promptText="Quantity" />
+      <Button fx:id="addToCartButton" layoutX="410.0" layoutY="350.0" mnemonicParsing="false" onAction="#addCartEvent" style="-fx-background-color: #E0CDBA;" text="Add to Cart" />
+      <TextField fx:id="idField" layoutX="318.0" layoutY="259.0" prefHeight="26.0" prefWidth="113.0" promptText="ID" />
+      <Label fx:id="quantityErrorLabel" layoutX="361.0" layoutY="325.0" prefHeight="18.0" prefWidth="2.0" textFill="RED" />
+      <TextField fx:id="weightField" layoutX="449.0" layoutY="295.0" prefHeight="26.0" prefWidth="113.0" promptText="Weight" />
+   </children>
+</AnchorPane>

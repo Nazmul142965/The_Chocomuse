@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.tcms.admin.AdminAddItem">
+   <children>
+      <ImageView fitHeight="170.0" fitWidth="166.0" layoutX="-2.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/TC%20profile.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="-2.0" layoutY="178.0" mnemonicParsing="false" onAction="#dashboardEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="🏠 Dashboard" />
+      <Button layoutX="-2.0" layoutY="218.0" mnemonicParsing="false" onAction="#addItemEvent" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA; -fx-border-color: black;" text="➕ Add Item  " />
+      <Button layoutX="-3.0" layoutY="256.0" mnemonicParsing="false" onAction="#revenueEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="💰 Revenue" />
+      <Button layoutX="-2.0" layoutY="294.0" mnemonicParsing="false" onAction="#inventoryEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="📦 Inventory" />
+      <Button layoutX="-2.0" layoutY="331.0" mnemonicParsing="false" onAction="#signOutEvent" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #E0CDBA;" text="⚙ SignOut" />
+      <Separator layoutX="165.0" layoutY="4.0" orientation="VERTICAL" prefHeight="356.0" prefWidth="2.0" />
+      <Label layoutX="209.0" layoutY="32.0" text="Chocoalate ID:" />
+      <TextField fx:id="idField" layoutX="209.0" layoutY="57.0" />
+      <Label layoutX="209.0" layoutY="90.0" text="Chocolate Name:" />
+      <TextField fx:id="nameField" layoutX="209.0" layoutY="115.0" />
+      <Label layoutX="210.0" layoutY="144.0" text="Weight" />
+      <TextField fx:id="weightField" layoutX="210.0" layoutY="169.0" />
+      <Label layoutX="211.0" layoutY="257.0" text="Price" />
+      <TextField fx:id="priceField" layoutX="211.0" layoutY="282.0" />
+      <Label layoutX="399.0" layoutY="32.0" text="Production:" />
+      <DatePicker fx:id="productionDateField" layoutX="399.0" layoutY="57.0" />
+      <Label layoutX="399.0" layoutY="90.0" text="Expire:" />
+      <DatePicker fx:id="expireDateField" layoutX="399.0" layoutY="114.0" />
+      <Label layoutX="211.0" layoutY="200.0" text="Quantity:" />
+      <TextField fx:id="quantityField" layoutX="211.0" layoutY="221.0" />
+      <ImageView fx:id="imageViewField" fitHeight="102.0" fitWidth="150.0" layoutX="399.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="446.0" layoutY="281.0" mnemonicParsing="false" onAction="#updateImageEvent" style="-fx-background-color: #E0CDBA;" text="Upload" />
+      <Button layoutX="359.0" layoutY="331.0" mnemonicParsing="false" onAction="#saveEvent" style="-fx-background-color: #E0CDBA;" text="Save" />
+   </children>
+</AnchorPane>
